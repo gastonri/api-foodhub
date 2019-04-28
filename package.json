@@ -1,0 +1,14 @@
+{
+    "dependencies": {
+        "express": "^4.16.4",
+        "mongoose": "^5.5.4"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.11"
+    },
+    "main": "server.js",
+    "name": "API-foodhub",
+    "scripts": {
+        "server": "nodemon server.js"
+    }
+}
