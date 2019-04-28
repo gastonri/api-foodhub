@@ -24,4 +24,17 @@ function getUsuarioByNombre(req, res) {
     });
 }
 
-module.exports = { getUsuarioById, getUsuarioByNombre };
+function setUsuarioPassword(req, res) {
+    var usuario = new Usuario({
+        usuario: req.params.usuario,
+        password: req.params.password
+    });
+
+    usuario.save(function(err) {
+        if (err)
+            return res.status(500).send({ message: 'Error en la petición' });
+        res.send('Guardado exitosamente!');
+    });
+}
+
+module.exports = { getUsuarioById, getUsuarioByNombre, setUsuarioPassword };
