@@ -26,8 +26,8 @@ function getUsuarioByNombre(req, res) {
 
 function setUsuarioPassword(req, res) {
     var usuario = new Usuario({
-        usuario: req.params.usuario,
-        password: req.params.password
+        usuario: req.body.usuario,
+        password: req.body.password
     });
 
     usuario.save(function(err) {
