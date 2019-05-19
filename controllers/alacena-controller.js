@@ -23,6 +23,19 @@ function saveItem(req, res) {
     });
 }
 
+function getItems(req, res) {
+    var propietarioItem = {_propietario: req.params.id};
+
+    ItemAlacena.find(propietarioItem)
+    .then(docs => {
+        return res.status(200).send({docs});
+    })
+    .catch(err => {
+        return res.status(500).send({ message: 'Ocurrió un error', err});
+    });
+}
+
 module.exports = {
+    getItems,
     saveItem
 };
