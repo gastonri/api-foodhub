@@ -1,5 +1,5 @@
 var express = require('express');
-var UsuarioController = require('./controllers/usuario-controller');
+var UsuarioController = require('../controllers/usuario-controller');
 
 var api = express.Router();
 
