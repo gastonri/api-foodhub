@@ -11,6 +11,6 @@
     "main": "server.js",
     "name": "API-foodhub",
     "scripts": {
-        "server": "nodemon server.js"
+        "start": "nodemon server.js"
     }
 }
