@@ -4,7 +4,8 @@ var Schema = mongoose.Schema;
 
 var ItemAlacenaSchema = new Schema({
     _propietario: {
-        type: Schema.Types.ObjectId, ref: 'Usuario'
+        type: Schema.Types.ObjectId,
+        ref: 'Usuario'
     },
     nombre: {
         type: String,
